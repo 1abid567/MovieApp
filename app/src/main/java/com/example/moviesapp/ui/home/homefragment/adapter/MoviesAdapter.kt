@@ -8,8 +8,7 @@ import com.example.moviesapp.databinding.MovieItemDataBinding
 import com.example.moviesapp.ui.home.homefragment.model.Movie
 import com.example.moviesapp.utils.toJson
 
-class MoviesAdapter :
-    PagingDataAdapter<Movie, MovieViewHolder>(AllMovieModelComparator) {
+class MoviesAdapter : PagingDataAdapter<Movie, MovieViewHolder>(AllMovieModelComparator) {
 
 
     // Inflates the item views
@@ -21,7 +20,8 @@ class MoviesAdapter :
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-
+        getItem(position)?.let { holder.setData(it) }
+        holder.binding?.executePendingBindings()
     }
 
     companion object {

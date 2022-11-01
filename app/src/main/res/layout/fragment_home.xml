@@ -25,7 +25,7 @@
         app:layout_constraintTop_toBottomOf="@+id/header_layout">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/all_reviews_recyclerview"
+            android:id="@+id/all_movies_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
