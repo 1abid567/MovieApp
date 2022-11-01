@@ -56,6 +56,8 @@ ext {
     fragment_ktx_version = '1.6.0-alpha03'
     navigation_ktx_version = '2.5.3'
     hilt_version='2.44'
+    retrofit_version = "2.9.0"
+    okhttp_version = '5.0.0-alpha.2'
 }
 
 dependencies {
@@ -96,5 +98,12 @@ dependencies {
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
+    //Retrofit
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    //okhttp
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
 }
