@@ -1,5 +1,6 @@
 package com.example.moviesapp.ui.splash
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import com.example.moviesapp.R
 import com.example.moviesapp.ui.home.HomeActivity
 import kotlinx.coroutines.*
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
     private val activityScope = CoroutineScope(Dispatchers.Main)
