@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.moviesapp.base.BaseFragment
 import com.example.moviesapp.databinding.FragmentHomeBinding
+import com.example.moviesapp.ui.home.homefragment.adapter.MoviesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,6 +16,7 @@ class HomeFragment : BaseFragment() {
     lateinit var _binding : FragmentHomeBinding
     private val viewModel :HomeViewModel by viewModels()
     private val binding get() = _binding
+    private val allReviewsAdapter: MoviesAdapter by lazy { MoviesAdapter() }
 
 
     override fun onCreateView(

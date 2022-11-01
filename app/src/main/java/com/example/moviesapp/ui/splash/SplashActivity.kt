@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.moviesapp.R
 import com.example.moviesapp.ui.home.HomeActivity
+import com.example.moviesapp.utils.AppUtils.makeStatusBarTransparent
 import kotlinx.coroutines.*
 
 @SuppressLint("CustomSplashScreen")
@@ -16,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        makeStatusBarTransparent()
         activityScope.launch {
             delay(4000)
             startActivity(Intent(this@SplashActivity,HomeActivity::class.java))
