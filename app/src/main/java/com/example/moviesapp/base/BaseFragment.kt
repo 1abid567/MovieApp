@@ -1,4 +1,6 @@
-package com.example.dummyproject.base
+package com.example.moviesapp.base
 
-class BaseFragment {
+import androidx.fragment.app.Fragment
+
+open class BaseFragment  : Fragment(){
 }

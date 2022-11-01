@@ -1,18 +1,19 @@
-package com.example.moviesapp.ui.home
+package com.example.moviesapp.ui.home.homefragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.moviesapp.R
+import androidx.fragment.app.viewModels
+import com.example.moviesapp.base.BaseFragment
 import com.example.moviesapp.databinding.FragmentHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
-class HomeFragment : Fragment() {
+@AndroidEntryPoint
+class HomeFragment : BaseFragment() {
 
     lateinit var _binding : FragmentHomeBinding
-
+    private val viewModel :HomeViewModel by viewModels()
     private val binding get() = _binding
 
 
@@ -25,6 +26,11 @@ class HomeFragment : Fragment() {
             lifecycleOwner=this@HomeFragment
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 
 
